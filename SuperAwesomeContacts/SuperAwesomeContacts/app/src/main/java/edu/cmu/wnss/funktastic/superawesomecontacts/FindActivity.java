@@ -36,9 +36,9 @@ public class FindActivity extends Activity implements FindReturnable {
         Log.d("Tag : query string",queryString+ "     str");
 
 
-//        if(sourceIntent.getType() != null && sourceIntent.getType().equals(
-//                FindActivity.FIND_CONTACT_INTENT_TYPE) && getCallingActivity().getShortClassName().equals(
-//                getPackageManager().getLaunchIntentForPackage(getPackageName()).getComponent().getShortClassName())) {
+        if(sourceIntent.getType() != null && sourceIntent.getType().equals(
+                FindActivity.FIND_CONTACT_INTENT_TYPE) && getCallingActivity().getShortClassName().equals(
+                getPackageManager().getLaunchIntentForPackage(getPackageName()).getComponent().getShortClassName())) {
             queryString = sourceIntent.getStringExtra(FindActivity.FIND_CONTACT_EXTRA_KEY);
             if(queryString != null) {
                 Log.d("Tag : query string : ",queryString+ "     str");
@@ -46,7 +46,7 @@ public class FindActivity extends Activity implements FindReturnable {
                 Log.d("Tag : finished",queryString+ "     str");
                 getContacts.start();
             }
-//        }
+        }
     }
 
     @Override
